@@ -71,8 +71,8 @@ Para consultas e visualizações de exemplo, consulte o notebook [data_explorati
 
 Exemplos de inserção de dados podem ser encontrados nos seguintes arquivos:
 
-** ingest_rasters.sh
-** ingest_polygons.py
+* [ingest_rasters.sh](data-loader/data/ingest_rasters.sh)
+* [ingest_polygons.py](data-loader/data/ingest_polygons.py)
 
 ## Trabalhos Relacionados
 

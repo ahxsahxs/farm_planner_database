@@ -72,8 +72,8 @@ For example queries and visualizations, refer to the [data_exploration.ipynb](da
 
 Examples of data insertion can be found in the following files:
 
-** ingest_rasters.sh
-** ingest_polygons.py
+* [ingest_rasters.sh](data-loader/data/ingest_rasters.sh)
+* [ingest_polygons.py](data-loader/data/ingest_polygons.py)
 
 ## Related Work
 

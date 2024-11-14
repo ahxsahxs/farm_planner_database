@@ -1,5 +1,7 @@
-pgdata
-data-loader/data/polygons
-data-loader/data/rasters
+pgdata/*
+data-loader/data/polygons/*
+data-loader/data/rasters/*
 data-loader/data/venv
 data-loader/data/temp_raster.tif
+README.html
+README_files

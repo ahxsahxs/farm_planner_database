@@ -1,0 +1,37 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.5
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    networks:
+      - farm-planner-network
+
+  data_loader:
+    build: "data-loader"
+    environment:
+      PGHOST: postgis
+      PGPORT: 5432
+      PGDATABASE: postgres
+      PGUSER: postgres
+      PGPASSWORD: postgres
+    working_dir: "/mnt/data"
+    entrypoint: ["/mnt/data/init.sh"]
+    volumes:
+      - ./data-loader/data:/mnt/data
+    networks:
+      - farm-planner-network
+
+volumes:
+  pgdata:
+  data:
+networks:
+  farm-planner-network:
+    driver: bridge
